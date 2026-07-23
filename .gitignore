@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# 环境与密钥
+.env
+*.csv
+.env.*
+
+# 模型文件（大文件，不提交）
+models/
+
+# 生成的数据（录音和转写结果）
+data/
+
+# IDE / 编辑器
+.qoder/
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# APK（大型二进制）
+*.apk
