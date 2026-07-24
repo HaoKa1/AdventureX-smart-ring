@@ -1,7 +1,7 @@
 """麦克风录音 → 语音转文字 测试脚本。
 
 通过电脑麦克风录音，调用 ring_talking 模块的 SpeechToText 进行转写，
-将录音文件和转写结果保存在 data/ 目录中。
+将录音文件和转写结果保存在 ring_talking/data/ 目录中。
 
 前提条件：设置环境变量 DASHSCOPE_API_KEY（阿里云百炼 API Key）。
 
@@ -93,8 +93,8 @@ def save_result(txt_path: Path, wav_path: Path, text: str, timestamp: str) -> No
 
 
 async def main(args: argparse.Namespace) -> None:
-    # 确保 data/ 目录存在
-    data_dir = Path(__file__).parent / "data"
+    # 确保 ring_talking/data/ 目录存在
+    data_dir = Path(__file__).parent / "ring_talking" / "data"
     data_dir.mkdir(parents=True, exist_ok=True)
 
     # --- 录音 ---

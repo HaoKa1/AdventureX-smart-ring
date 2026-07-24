@@ -1,0 +1,6 @@
+{"type":"device-state","connected":true,"address":"EB:CD:C4:47:F4:8C","battery_percent":84,"firmware_version":"V2.000.0001.0015","model":"ring_sound","timestamp":1234567890}
+{"type":"raw-imu","timestamp":1234567891,"ax":120,"ay":-30,"az":980,"gx":5,"gy":2,"gz":-1}
+{"type":"imu-state","timestamp":1234567891,"motion_intensity":0.73,"rotation_intensity":18.2,"is_stationary":false,"is_moving":true,"is_rotating":true,"dominant_accel_axis":"z","dominant_gyro_axis":"y","quality":"ok"}
+{"type":"gesture","gesture":"rotate_front","timestamp":1234567892}
+{"type":"voice-status","status":"recognizing","timestamp":1234567893}
+{"type":"voice-text","text":"识别文本","timestamp":1234567894}

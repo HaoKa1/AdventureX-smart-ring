@@ -13,11 +13,8 @@ build/
 *.csv
 .env.*
 
-# 模型文件（大文件，不提交）
-models/
-
 # 生成的数据（录音和转写结果）
-data/
+ring_talking/data/
 
 # IDE / 编辑器
 .qoder/

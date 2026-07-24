@@ -18,6 +18,7 @@ from pathlib import Path
 
 from utils.sdk_loader import get_sdk
 from utils.ffmpeg_tools import get_ffmpeg_path
+from utils.ble_connection import connect_ring, disconnect_ring
 
 
 class AudioDecoder:
@@ -50,7 +51,7 @@ class AudioDecoder:
         ffmpeg = get_ffmpeg_path()
 
         print(f"[AudioDecoder] 正在连接戒指 {self.ring_address} ...")
-        client = await sdk.connect_ring(address=self.ring_address)
+        client = await connect_ring(self.ring_address, log_prefix="[AudioDecoder]")
 
         try:
             # 确定文件索引
@@ -74,7 +75,7 @@ class AudioDecoder:
             )
 
         finally:
-            await client.disconnect()
+            await disconnect_ring(client, log_prefix="[AudioDecoder]")
 
         # 解码并保存为 WAV
         print("[AudioDecoder] 正在解码为 WAV ...")
